@@ -39,3 +39,7 @@ and it should show this and just enter the target URL together with its version
 ============================================
 Enter Target URL: http://localhost:3000/v3
 ```
+
+### Support my projects 
+![](https://github.com/zw1tt3r1on/RDRD/assets/64955404/8ebb3761-a320-4343-8f63-7e0d1a3eb964)
+https://www.buymeacoffee.com/zw1tt3r1on
