@@ -3,7 +3,7 @@ import requests, re, wget, pyfiglet
 print(pyfiglet.figlet_format('RDRD', font = "banner3-D"))
 print('-=-=Recursive Docker Registry Downloader=-=-')
 print('-=-=-=-=-=-=-Made by zw1tt3r1on-=-=-=-=-=-=-')
-print('==================')
+print('============================================')
 
 base_url = input('Enter Target URL: ')
 
@@ -22,12 +22,16 @@ try:
             for digest in digests:
                 print(digest)
                 file_to_download = f'{base_url}/{repository}/blobs/{digest}'
-                print(f'Downloading: {file_to_download}')
-                file_name = wget.download(file_to_download, f'{digest.split(":")[1]}')
+                try:
+                    print(f'Downloading: {file_to_download}')
+                    file_name = wget.download(file_to_download, f'{digest.split(":")[1]}')
+                except:
+                    pass
 
     print('Download Finished')
 except:
-    print('''Invalid Target URL
+    print('''
+Invalid Target URL
 Include the "http://" and version in the target URL
 Example: python3 script.py https://zw1tt3r1on.example.com/v2
 
